@@ -175,3 +175,5 @@ module.exports = {
 	},
 };
 ```
+
+## 处理 html 资源

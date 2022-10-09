@@ -1,5 +1,6 @@
 // import { Configuration } from "webpack";
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 /**
  * @type {Configuration}
@@ -93,8 +94,15 @@ const config = {
 		],
 	},
 	// 插件
-	plugins: [],
+	plugins: [
+		new HtmlWebpackPlugin({
+			// 以 public/index.html 为模板创建文件
+			// 新的html文件有两个特点：1. 内容和源文件一致 2. 自动引入打包生成的js等资源
+			template: path.resolve(__dirname, "public/index.html"),
+		}),
+	],
 	// 模式
+	// 模式设置production才会压缩文件
 	mode: "development",
 };
 
