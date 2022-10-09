@@ -156,3 +156,33 @@ module.exports = {
     	},
     };
     ```
+
+## 开发服务器配置
+
+**webpack-dev-server**
+
+1. 下载
+
+```commandLine
+npm i webpack-dev-server -D
+```
+
+2. 配置
+
+```js
+module.exports = {
+	// 开发服务器
+	// 开发服务器是不会输出资源，是在内存中编译打包的
+	devServer: {
+		host: "localhost", // 启动服务器域名
+		port: "3000", // 启动服务器端口号
+		open: true, // 是否自动打开浏览器
+	},
+};
+```
+
+3. 启动
+
+```commandLine
+npx webpack server
+```

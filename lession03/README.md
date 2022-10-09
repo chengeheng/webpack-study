@@ -177,3 +177,30 @@ module.exports = {
 ```
 
 ## 处理 html 资源
+
+1. 下载
+
+```commandLine
+npm i html-webpack-plugin -D
+```
+
+2. 配置
+
+```js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+	plugins: [
+		new HtmlWebpackPlugin({
+			// 以 public/index.html 为模板创建文件
+			// 新的html文件有两个特点：1. 内容和源文件一致 2. 自动引入打包生成的js等资源
+			template: path.resolve(__dirname, "public/index.html"),
+		}),
+	],
+};
+```
+
+3. 修改 html
+
+html 模板文件中不需要再引入 js
