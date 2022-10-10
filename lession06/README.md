@@ -37,3 +37,5 @@ module.exports = {
 	devtool: "source-map",
 };
 ```
+
+生产模式下，如果不需要 map 文件，无需设置这个 devtool 的值即可。

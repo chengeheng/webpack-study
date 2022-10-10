@@ -126,7 +126,7 @@ const config = {
 		new CssMinimizerPlugin(),
 	],
 	// source-map
-	devtool: "source-map",
+	// devtool: "source-map",
 };
 
 module.exports = config;
