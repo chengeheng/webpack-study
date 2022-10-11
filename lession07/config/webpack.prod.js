@@ -117,7 +117,7 @@ const config = {
 								},
 							},
 							{
-								loader: "babel-loader", // 开启多进程
+								loader: "babel-loader",
 								options: {
 									cacheDirectory: true, // 开启babel编译缓存
 									cacheCompression: false, // 缓存文件不要压缩
